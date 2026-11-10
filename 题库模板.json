@@ -1,0 +1,63 @@
+{
+  "说明": "每种答法各一个样例。真正的单元文件里，题目放在 questions 数组里，不要带这个说明字段。",
+  "format": "xsb-tiku-1",
+  "subject": "math",
+  "subject_name": "数学",
+  "unit_id": "u1",
+  "unit": "一、5以内数的认识和加、减法",
+  "questions": [
+    {
+      "id": "math-u1-count-001",
+      "subject": "math",
+      "subject_name": "数学",
+      "unit_id": "u1",
+      "unit": "一、5以内数的认识和加、减法",
+      "type_id": "count",
+      "type": "数一数",
+      "question": "数一数，一共有几个苹果？",
+      "image": "data:image/png;base64,iVBORw0KGgo...（图片，这里省略）",
+      "answer_type": "number",
+      "options": null,
+      "answer": 5,
+      "accept": ["5", "五"],
+      "explain": "一个一个点着数：1、2、3、4、5。"
+    },
+    {
+      "id": "math-u1-cmp-001",
+      "subject": "math",
+      "subject_name": "数学",
+      "unit_id": "u1",
+      "unit": "一、5以内数的认识和加、减法",
+      "type_id": "cmp",
+      "type": "比大小",
+      "question": "比一比：4（ ）2，括号里填 >、< 还是 =？",
+      "image": null,
+      "answer_type": "choice",
+      "options": [
+        { "text": ">", "image": null },
+        { "text": "<", "image": null },
+        { "text": "=", "image": null }
+      ],
+      "answer": 0,
+      "accept": [],
+      "accept_options": [["大于", "大于号"], ["小于", "小于号"], ["等于", "一样"]],
+      "explain": "左边是 4，右边是 2"
+    },
+    {
+      "id": "en-u1-say-001",
+      "subject": "english",
+      "subject_name": "英语",
+      "unit_id": "u1",
+      "unit": "Unit 1 Hello!",
+      "type_id": "say",
+      "type": "说一说",
+      "question": "“喂，你好”用英语怎么说？说出来或写出来。",
+      "image": null,
+      "answer_type": "text",
+      "options": null,
+      "answer": "hello",
+      "accept": ["hello"],
+      "explain": "喂，你好：hello"
+    }
+  ]
+}

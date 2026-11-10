@@ -1,0 +1,315 @@
+{
+ "format": "xsb-tiku-1",
+ "name": "小书包题库",
+ "updated": "2026-11-10",
+ "subjects": [
+  {
+   "subject": "math",
+   "subject_name": "数学",
+   "count": 1070,
+   "units": [
+    {
+     "unit_id": "u1",
+     "unit": "一、5以内数的认识和加、减法",
+     "file": "math/u1.json",
+     "count": 230,
+     "types": {
+      "数一数": 40,
+      "比大小": 40,
+      "第几": 40,
+      "分与合": 30,
+      "口算": 40,
+      "看图列式": 40
+     }
+    },
+    {
+     "unit_id": "u2",
+     "unit": "二、6～10的认识和加、减法",
+     "file": "math/u2.json",
+     "count": 240,
+     "types": {
+      "数一数": 40,
+      "比大小": 40,
+      "第几": 40,
+      "分与合": 40,
+      "口算": 40,
+      "看图列式": 40
+     }
+    },
+    {
+     "unit_id": "u3",
+     "unit": "三、认识立体图形",
+     "file": "math/u3.json",
+     "count": 102,
+     "types": {
+      "认图形": 22,
+      "找一找": 40,
+      "数图形": 40
+     }
+    },
+    {
+     "unit_id": "u4",
+     "unit": "四、11～20的认识",
+     "file": "math/u4.json",
+     "count": 160,
+     "types": {
+      "数一数": 40,
+      "十位个位": 40,
+      "比大小": 40,
+      "口算": 40
+     }
+    },
+    {
+     "unit_id": "u5",
+     "unit": "五、20以内的进位加法",
+     "file": "math/u5.json",
+     "count": 156,
+     "types": {
+      "口算": 36,
+      "凑十": 40,
+      "比大小": 40,
+      "看图列式": 40
+     }
+    },
+    {
+     "unit_id": "u6",
+     "unit": "六、复习与关联",
+     "file": "math/u6.json",
+     "count": 182,
+     "types": {
+      "口算": 40,
+      "比大小": 40,
+      "十位个位": 40,
+      "看图列式": 40,
+      "认图形": 22
+     }
+    }
+   ]
+  },
+  {
+   "subject": "english",
+   "subject_name": "英语",
+   "count": 552,
+   "units": [
+    {
+     "unit_id": "u1",
+     "unit": "Unit 1 Hello!",
+     "file": "english/u1.json",
+     "count": 68,
+     "types": {
+      "看中文选英文": 13,
+      "看英文选中文": 13,
+      "说一说": 13,
+      "补全字母": 10,
+      "看图选单词": 2,
+      "看图说单词": 2,
+      "看中文选句子": 5,
+      "看句子选意思": 5,
+      "说句子": 5
+     }
+    },
+    {
+     "unit_id": "u2",
+     "unit": "Unit 2 Numbers",
+     "file": "english/u2.json",
+     "count": 74,
+     "types": {
+      "看中文选英文": 11,
+      "看英文选中文": 11,
+      "说一说": 11,
+      "补全字母": 11,
+      "看图选单词": 9,
+      "看图说单词": 9,
+      "看中文选句子": 4,
+      "看句子选意思": 4,
+      "说句子": 4
+     }
+    },
+    {
+     "unit_id": "u3",
+     "unit": "Unit 3 Family",
+     "file": "english/u3.json",
+     "count": 83,
+     "types": {
+      "看中文选英文": 14,
+      "看英文选中文": 14,
+      "说一说": 14,
+      "补全字母": 11,
+      "看图选单词": 9,
+      "看图说单词": 9,
+      "看中文选句子": 4,
+      "看句子选意思": 4,
+      "说句子": 4
+     }
+    },
+    {
+     "unit_id": "u4",
+     "unit": "Unit 4 My classroom",
+     "file": "english/u4.json",
+     "count": 102,
+     "types": {
+      "看中文选英文": 18,
+      "看英文选中文": 18,
+      "说一说": 17,
+      "补全字母": 15,
+      "看图选单词": 8,
+      "看图说单词": 8,
+      "看中文选句子": 6,
+      "看句子选意思": 6,
+      "说句子": 6
+     }
+    },
+    {
+     "unit_id": "u5",
+     "unit": "Unit 5 School things",
+     "file": "english/u5.json",
+     "count": 63,
+     "types": {
+      "看中文选英文": 10,
+      "看英文选中文": 10,
+      "说一说": 10,
+      "补全字母": 7,
+      "看图选单词": 4,
+      "看图说单词": 4,
+      "看中文选句子": 6,
+      "看句子选意思": 6,
+      "说句子": 6
+     }
+    },
+    {
+     "unit_id": "u6",
+     "unit": "Unit 6 Colours",
+     "file": "english/u6.json",
+     "count": 86,
+     "types": {
+      "看中文选英文": 14,
+      "看英文选中文": 14,
+      "说一说": 14,
+      "补全字母": 11,
+      "看图选单词": 9,
+      "看图说单词": 9,
+      "看中文选句子": 5,
+      "看句子选意思": 5,
+      "说句子": 5
+     }
+    },
+    {
+     "unit_id": "u7",
+     "unit": "This is Chongqing!",
+     "file": "english/u7.json",
+     "count": 50,
+     "types": {
+      "看中文选英文": 11,
+      "看英文选中文": 11,
+      "说一说": 11,
+      "补全字母": 5,
+      "看图选单词": 3,
+      "看图说单词": 3,
+      "看中文选句子": 2,
+      "看句子选意思": 2,
+      "说句子": 2
+     }
+    },
+    {
+     "unit_id": "u8",
+     "unit": "Reading: The bear picks apples",
+     "file": "english/u8.json",
+     "count": 26,
+     "types": {
+      "看中文选英文": 4,
+      "看英文选中文": 4,
+      "说一说": 4,
+      "补全字母": 4,
+      "看图选单词": 2,
+      "看图说单词": 2,
+      "看中文选句子": 2,
+      "看句子选意思": 2,
+      "说句子": 2
+     }
+    }
+   ]
+  },
+  {
+   "subject": "history",
+   "subject_name": "历史",
+   "count": 200,
+   "units": [
+    {
+     "unit_id": "h1",
+     "unit": "中国 · 传说和早期",
+     "file": "history/h1.json",
+     "count": 23,
+     "types": {
+      "历史知识": 23
+     }
+    },
+    {
+     "unit_id": "h2",
+     "unit": "中国 · 秦汉三国",
+     "file": "history/h2.json",
+     "count": 35,
+     "types": {
+      "历史知识": 35
+     }
+    },
+    {
+     "unit_id": "h3",
+     "unit": "中国 · 隋唐到明清",
+     "file": "history/h3.json",
+     "count": 40,
+     "types": {
+      "历史知识": 40
+     }
+    },
+    {
+     "unit_id": "h4",
+     "unit": "中国 · 节日、发明和文化",
+     "file": "history/h4.json",
+     "count": 31,
+     "types": {
+      "历史知识": 31
+     }
+    },
+    {
+     "unit_id": "h5",
+     "unit": "中国 · 近现代",
+     "file": "history/h5.json",
+     "count": 19,
+     "types": {
+      "历史知识": 19
+     }
+    },
+    {
+     "unit_id": "w1",
+     "unit": "世界 · 古代",
+     "file": "history/w1.json",
+     "count": 21,
+     "types": {
+      "历史知识": 21
+     }
+    },
+    {
+     "unit_id": "w2",
+     "unit": "世界 · 发明和名人",
+     "file": "history/w2.json",
+     "count": 31,
+     "types": {
+      "历史知识": 31
+     }
+    }
+   ]
+  },
+  {
+   "subject": "yuwen",
+   "subject_name": "语文",
+   "count": 0,
+   "units": [],
+   "note": "等课本录入后补上"
+  }
+ ],
+ "wrong": {
+  "kids_file": "wrong/kids.json",
+  "file_pattern": "wrong/{kid_id}.json"
+ },
+ "total": 1822
+}
