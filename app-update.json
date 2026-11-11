@@ -1,8 +1,8 @@
 {
   "format": "study-gate-update-1",
-  "version_code": 14,
-  "version_name": "0.3.2",
-  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.3.2.apk",
-  "sha256": "4a621c6e9b4bdd0e19d73700acb1db1bc4fd3cf497ce6a0917e6b018ccffa0b1",
-  "notes": "新增远程移除设备及清除设备端远程管理钥匙；预配置后只需填写设备名称。"
+  "version_code": 15,
+  "version_name": "0.4.0",
+  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.4.0.apk",
+  "sha256": "9b20d2e1dba489fad8e2d1ad2a72a09bd5ca35762164615671d9d3cb764f37cb",
+  "notes": "新增应用白名单及每个应用的每日总额度；保留答题间隔；支持查看当天用量、加时、重启保留额度。"
 }
