@@ -1,8 +1,8 @@
 {
   "format": "study-gate-update-1",
-  "version_code": 19,
-  "version_name": "0.6.0",
-  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.6.0.apk",
-  "sha256": "ec6e2d2635b6098210db7e961897bf5aa5d9efc47b0c5009e2afb79061f47807",
-  "notes": "全新暖白深绿界面、书包自适应图标；首页状态卡、清晰答题进度、设置折叠分组与应用搜索。"
+  "version_code": 20,
+  "version_name": "0.7.0",
+  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.7.0.apk",
+  "sha256": "9dedb47a06096e1d8acd1bece84eecd17b401bb2e5af16411a8c2b69262a33fe",
+  "notes": "出题优先使用本地缓存，后台准备题目与错题、预加载下一题和图片；答对后约0.45秒自动切题。"
 }
