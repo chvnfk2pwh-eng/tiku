@@ -1,8 +1,8 @@
 {
   "format": "study-gate-update-1",
-  "version_code": 18,
-  "version_name": "0.5.1",
-  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.5.1.apk",
-  "sha256": "a9db4269b8e9c7ee13dabb9270e403dfa01d7471624bd261caa14787d3d9e3f2",
-  "notes": "新增一键关闭所有使用限制，解除答题锁定、白名单、每日额度和系统设置验证；保留规则及远程连接。"
+  "version_code": 19,
+  "version_name": "0.6.0",
+  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.6.0.apk",
+  "sha256": "ec6e2d2635b6098210db7e961897bf5aa5d9efc47b0c5009e2afb79061f47807",
+  "notes": "全新暖白深绿界面、书包自适应图标；首页状态卡、清晰答题进度、设置折叠分组与应用搜索。"
 }
