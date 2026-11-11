@@ -9,7 +9,7 @@
  const encode=x=>{const bytes=new TextEncoder().encode(JSON.stringify(x));let s='';for(const b of bytes)s+=String.fromCharCode(b);return btoa(s);};
  const decode=x=>JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(x.replace(/\s/g,'')),c=>c.charCodeAt(0))));
  class GitHubFamily {
-  constructor(repo,token,fetcher=fetch){if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repo))throw Error('请填写 用户名/私有仓库名');this.repo=repo;this.token=token;this.fetch=fetcher;}
+  constructor(repo,token,fetcher=(...args)=>root.fetch(...args)){if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repo))throw Error('请填写 用户名/私有仓库名');this.repo=repo;this.token=token;this.fetch=fetcher;}
   async api(method,path='',body){if(path.includes('..')||!/^[/A-Za-z0-9_.-]*$/.test(path))throw Error('文件路径无效');const r=await this.fetch('https://api.github.com/repos/'+this.repo+(path?'/contents/'+path:''),{method,redirect:'error',cache:'no-store',headers:{Authorization:'Bearer '+this.token,Accept:'application/vnd.github+json',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});if(r.status===404)return {status:404};if(!r.ok)throw Error(r.status===401?'管理钥匙已失效或填写错误':r.status===403?'管理钥匙权限不足，或 GitHub 请求受限':r.status===409||r.status===422?'规则已被其他操作修改，请刷新后重试':'GitHub 请求失败（'+r.status+'）');return {status:r.status,data:await r.json()};}
   async connect(){const r=await this.api('GET');if(r.status===404)throw Error('未找到仓库，请检查名称及钥匙访问范围');if(!r.data.private)throw Error('请选择私有仓库，公开题库不能存放远程命令和孩子记录');return r.data;}
   async read(path){const r=await this.api('GET',path);if(r.status===404)return {sha:null,document:null};if(Array.isArray(r.data))return {directory:r.data};return {sha:r.data.sha,document:decode(r.data.content)};}
