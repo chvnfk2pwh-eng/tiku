@@ -11,5 +11,5 @@ globalThis.FamilyCredentials=(()=>{
   clear:()=>storage.clear()
  };}
  function parse(text){const match=text.match(/^\s*远程家长控制端[：:]\s*(\S+)/m);if(!match||! /^(github_pat_|ghp_)[A-Za-z0-9_]+$/.test(match[1]))throw Error('文件中未找到“远程家长控制端：”后面的有效钥匙');const section=text.match(/七、GitHub[^\r\n]*仓库\s*([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/);return {repo:section?section[1]:'chvnfk2pwh-eng/-study-gate-family',token:match[1]};}
- return {vault,parse};
+ const learningVault=()=>vault({get:()=>access('readonly',s=>s.get('learning')),put:v=>access('readwrite',s=>s.put(v,'learning')),clear:()=>access('readwrite',s=>s.delete('learning'))});return {vault,parse,learningVault};
 })();
