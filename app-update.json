@@ -1,8 +1,8 @@
 {
   "format": "study-gate-update-1",
-  "version_code": 16,
-  "version_name": "0.4.1",
-  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.4.1.apk",
-  "sha256": "4e92d7ffd58973918449025b993ed5e4c867c8118261165bf4502d056e1497a3",
-  "notes": "支持每日额度全部归零、0 分钟禁止使用；家长控制端增加应用名称及包名搜索。"
+  "version_code": 17,
+  "version_name": "0.5.0",
+  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.5.0.apk",
+  "sha256": "ac998d6dd0e1e539583bfcb658d64ef9ad83b7eb7651dfbcebde16c0f31577bd",
+  "notes": "新增系统设置家长密码保护、5分钟临时授权、无障碍状态及日志；服务异常时暂停娱乐应用。"
 }
