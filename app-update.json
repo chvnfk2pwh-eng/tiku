@@ -1,0 +1,8 @@
+{
+  "format": "study-gate-update-1",
+  "version_code": 12,
+  "version_name": "0.3.0",
+  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.3.0.apk",
+  "sha256": "cabec029b1e498295f10721aa5d0fd440dc058fbfd698b67e291a5e561860248",
+  "notes": "新增 GitHub 私有家庭仓库配对、远程规则同步与设备操作记录，配套跨平台网页家长控制端。"
+}

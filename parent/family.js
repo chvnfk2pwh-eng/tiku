@@ -1,0 +1,21 @@
+(function(root){
+ 'use strict';
+ function validateSettings(s){
+  if(typeof s.enabled!=='boolean'||!Number.isInteger(s.minutes)||s.minutes<1||s.minutes>1440||!Number.isInteger(s.count)||s.count<1||s.count>50)throw Error('使用时间须为 1～1440 分钟，每轮答对 1～50 道题');
+  if(!['choice','voice'].includes(s.answer_mode)||!Array.isArray(s.apps)||s.apps.length>300||s.enabled&&!s.apps.length||!Array.isArray(s.subjects)||!s.subjects.length)throw Error('请选择回答方式、科目和受限应用');
+  if(!s.kid||!/^[A-Za-z0-9_-]{1,80}$/.test(s.kid.kid_id))throw Error('请选择孩子');
+  return s;
+ }
+ const encode=x=>{const bytes=new TextEncoder().encode(JSON.stringify(x));let s='';for(const b of bytes)s+=String.fromCharCode(b);return btoa(s);};
+ const decode=x=>JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(x.replace(/\s/g,'')),c=>c.charCodeAt(0))));
+ class GitHubFamily {
+  constructor(repo,token,fetcher=fetch){if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repo))throw Error('请填写 用户名/私有仓库名');this.repo=repo;this.token=token;this.fetch=fetcher;}
+  async api(method,path='',body){if(path.includes('..')||!/^[/A-Za-z0-9_.-]*$/.test(path))throw Error('文件路径无效');const r=await this.fetch('https://api.github.com/repos/'+this.repo+(path?'/contents/'+path:''),{method,redirect:'error',cache:'no-store',headers:{Authorization:'Bearer '+this.token,Accept:'application/vnd.github+json',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});if(r.status===404)return {status:404};if(!r.ok)throw Error(r.status===401?'管理钥匙已失效或填写错误':r.status===403?'管理钥匙权限不足，或 GitHub 请求受限':r.status===409||r.status===422?'规则已被其他操作修改，请刷新后重试':'GitHub 请求失败（'+r.status+'）');return {status:r.status,data:await r.json()};}
+  async connect(){const r=await this.api('GET');if(r.status===404)throw Error('未找到仓库，请检查名称及钥匙访问范围');if(!r.data.private)throw Error('请选择私有仓库，公开题库不能存放远程命令和孩子记录');return r.data;}
+  async read(path){const r=await this.api('GET',path);if(r.status===404)return {sha:null,document:null};if(Array.isArray(r.data))return {directory:r.data};return {sha:r.data.sha,document:decode(r.data.content)};}
+  async devices(){await this.connect();const r=await this.read('devices');if(!r.directory)return [];const folders=r.directory.filter(x=>x.type==='dir'&&/^[a-f0-9]{32}$/.test(x.name));const result=[];for(const folder of folders){const d=(await this.read('devices/'+folder.name+'/status.json')).document;if(d?.format==='study-gate-device-1'&&d.device_id===folder.name)result.push(d);}return result.sort((a,b)=>b.last_seen-a.last_seen);}
+  async send(deviceId,settings,expectedSha){validateSettings(settings);if(!/^[a-f0-9]{32}$/.test(deviceId))throw Error('设备编号无效');await this.connect();const path='devices/'+deviceId+'/control.json',old=await this.read(path);if(old.sha!==expectedSha)throw Error('另一位家长已更新规则，请刷新设备后重新设置');if(old.document&&(old.document.format!=='study-gate-control-1'||old.document.device_id!==deviceId))throw Error('远程规则文件格式异常');const doc={format:'study-gate-control-1',device_id:deviceId,generation:(old.document?.generation||0)+1,updated:Date.now(),settings};const written=await this.api('PUT',path,{message:'家长控制端：更新设备规则',content:encode(doc),...(old.sha?{sha:old.sha}:{})});return {document:doc,sha:written.data.content.sha};}
+  async events(deviceId,day){if(!/^[a-f0-9]{32}$/.test(deviceId)||!/^\d{4}-\d{2}-\d{2}$/.test(day))throw Error('设备或日期无效');const r=await this.read('devices/'+deviceId+'/events/'+day+'.json');if(!r.document)return [];if(r.document.format!=='study-gate-events-1'||r.document.device_id!==deviceId)throw Error('操作记录格式异常');return (r.document.events||[]).sort((a,b)=>b.t-a.t);}
+ }
+ const exports={GitHubFamily,validateSettings,encode,decode};if(typeof module!=='undefined')module.exports=exports;else root.Family=exports;
+})(typeof globalThis==='undefined'?this:globalThis);
