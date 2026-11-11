@@ -5,7 +5,7 @@
   if(!['choice','voice'].includes(s.answer_mode)||!Array.isArray(s.apps)||s.apps.length>300||s.enabled&&!s.apps.length||!Array.isArray(s.subjects)||!s.subjects.length)throw Error('请选择回答方式、科目和受限应用');
   if(!s.kid||!/^[A-Za-z0-9_-]{1,80}$/.test(s.kid.kid_id))throw Error('请选择孩子');
   if(s.whitelist!==undefined&&typeof s.whitelist!=='boolean')throw Error('白名单开关格式错误');
-  if(s.whitelist){if(!s.daily_limits||s.apps.some(p=>!Number.isInteger(s.daily_limits[p])||s.daily_limits[p]<1||s.daily_limits[p]>1440))throw Error('每个允许应用的每日额度须为 1～1440 分钟');}
+  if(s.whitelist){if(!s.daily_limits||s.apps.some(p=>!Number.isInteger(s.daily_limits[p])||s.daily_limits[p]<0||s.daily_limits[p]>1440))throw Error('每个允许应用的每日额度须为 0～1440 分钟');}
   return s;
  }
  const encode=x=>{const bytes=new TextEncoder().encode(JSON.stringify(x));let s='';for(const b of bytes)s+=String.fromCharCode(b);return btoa(s);};
