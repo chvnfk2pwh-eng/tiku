@@ -1,8 +1,8 @@
 {
   "format": "study-gate-update-1",
-  "version_code": 20,
-  "version_name": "0.7.0",
-  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.7.0.apk",
-  "sha256": "9dedb47a06096e1d8acd1bece84eecd17b401bb2e5af16411a8c2b69262a33fe",
-  "notes": "出题优先使用本地缓存，后台准备题目与错题、预加载下一题和图片；答对后约0.45秒自动切题。"
+  "version_code": 22,
+  "version_name": "0.7.2",
+  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.7.2.apk",
+  "sha256": "bb3807ba390f3e358c0c95c0ef325ab05a6ab4eefca2ab87dc96c2fbbdecbdec",
+  "notes": "修复后台远程规则应用：无障碍服务独立检查云端规则并维护恢复服务；远程规则结束旧家长临时授权；界面下次显示时刷新，不依赖打开客户端生效。"
 }
