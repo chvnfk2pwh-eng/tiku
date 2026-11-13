@@ -1,8 +1,8 @@
 {
   "format": "study-gate-update-1",
-  "version_code": 22,
-  "version_name": "0.7.2",
-  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.7.2.apk",
-  "sha256": "bb3807ba390f3e358c0c95c0ef325ab05a6ab4eefca2ab87dc96c2fbbdecbdec",
-  "notes": "修复后台远程规则应用：无障碍服务独立检查云端规则并维护恢复服务；远程规则结束旧家长临时授权；界面下次显示时刷新，不依赖打开客户端生效。"
+  "version_code": 23,
+  "version_name": "0.7.3",
+  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.7.3.apk",
+  "sha256": "bb02471a51993b2873ac963a3451552d5d2a505c1cd96fa4412f998ee5cc573b",
+  "notes": "电视深色横屏答题：左侧题目图片、右侧两列选项，一屏显示常规题；独立滚动长内容，保留遥控器焦点和深色答错反馈。"
 }
