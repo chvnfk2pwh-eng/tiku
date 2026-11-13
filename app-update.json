@@ -1,8 +1,8 @@
 {
   "format": "study-gate-update-1",
-  "version_code": 23,
-  "version_name": "0.7.3",
-  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.7.3.apk",
-  "sha256": "bb02471a51993b2873ac963a3451552d5d2a505c1cd96fa4412f998ee5cc573b",
-  "notes": "电视深色横屏答题：左侧题目图片、右侧两列选项，一屏显示常规题；独立滚动长内容，保留遥控器焦点和深色答错反馈。"
+  "version_code": 24,
+  "version_name": "0.7.4",
+  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.7.4.apk",
+  "sha256": "ba68b25226a51d36fcb377caa0f1d33f4ae79a536d83404f7c2ff720e20952a3",
+  "notes": "自动识别海信 VIDAA 共用桌面视频系统，新增“海信自带视频（影视页面）”独立额度；按已适配的视频页面计时和拦截，保护普通桌面。"
 }
