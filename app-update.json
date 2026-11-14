@@ -1,8 +1,8 @@
 {
   "format": "study-gate-update-1",
-  "version_code": 24,
-  "version_name": "0.7.4",
-  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.7.4.apk",
-  "sha256": "ba68b25226a51d36fcb377caa0f1d33f4ae79a536d83404f7c2ff720e20952a3",
-  "notes": "自动识别海信 VIDAA 共用桌面视频系统，新增“海信自带视频（影视页面）”独立额度；按已适配的视频页面计时和拦截，保护普通桌面。"
+  "version_code": 25,
+  "version_name": "0.8.0",
+  "apk_url": "https://chvnfk2pwh-eng.github.io/tiku/updates/study-gate-0.8.0.apk",
+  "sha256": "a6bbf4ca364b34c6a75032549a21f94374832685da1b41a248e6ba22b80e3a95",
+  "notes": "手机和平板新增独立强制休息：可设置每累计使用多少分钟休息多久；休息期间不扣应用每日额度，不累计答题使用时长，进度持久化。家长端和本机家长设置均可配置。"
 }
